@@ -84,12 +84,12 @@ clean: CMakeFiles/CityBuilderGame.dir/clean
 CMakeFiles/CityBuilderGame.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CityBuilderGame.dir\build.make CMakeFiles/CityBuilderGame.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CityBuilderGame.dir\build.make CMakeFiles/CityBuilderGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\261102\city_builder_game\build\CMakeFiles --progress-num=1,2,3,4 "Built target CityBuilderGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\261102\city_builder_game\build\CMakeFiles --progress-num=1,2,3,4,5 "Built target CityBuilderGame"
 .PHONY : CMakeFiles/CityBuilderGame.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/CityBuilderGame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\261102\city_builder_game\build\CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\261102\city_builder_game\build\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/CityBuilderGame.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\261102\city_builder_game\build\CMakeFiles 0
 .PHONY : CMakeFiles/CityBuilderGame.dir/rule
@@ -101,7 +101,7 @@ CityBuilderGame: CMakeFiles/CityBuilderGame.dir/rule
 # codegen rule for target.
 CMakeFiles/CityBuilderGame.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CityBuilderGame.dir\build.make CMakeFiles/CityBuilderGame.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\261102\city_builder_game\build\CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target CityBuilderGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\261102\city_builder_game\build\CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target CityBuilderGame"
 .PHONY : CMakeFiles/CityBuilderGame.dir/codegen
 
 # clean rule for target.

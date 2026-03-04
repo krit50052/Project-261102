@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/CityBuilderGame.dir/src/Game.cpp.obj.d"
   "CMakeFiles/CityBuilderGame.dir/src/Map.cpp.obj"
   "CMakeFiles/CityBuilderGame.dir/src/Map.cpp.obj.d"
+  "CMakeFiles/CityBuilderGame.dir/src/UIRenderer.cpp.obj"
+  "CMakeFiles/CityBuilderGame.dir/src/UIRenderer.cpp.obj.d"
   "CMakeFiles/CityBuilderGame.dir/src/main.cpp.obj"
   "CMakeFiles/CityBuilderGame.dir/src/main.cpp.obj.d"
   "CityBuilderGame.exe"

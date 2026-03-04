@@ -1,7 +1,6 @@
-CMakeFiles/CityBuilderGame.dir/src/Map.cpp.obj: \
- D:\261102\city_builder_game\src\Map.cpp \
- D:/261102/city_builder_game/include/Map.h \
- D:/261102/city_builder_game/include/MapNode.h \
+CMakeFiles/CityBuilderGame.dir/src/UIRenderer.cpp.obj: \
+ D:\261102\city_builder_game\src\UIRenderer.cpp \
+ D:/261102/city_builder_game/include/UIRenderer.h \
  D:/261102/city_builder_game/include/GameResources.h \
  D:/msys64/ucrt64/include/c++/15.2.0/string \
  D:/msys64/ucrt64/include/c++/15.2.0/bits/requires_hosted.h \
@@ -100,6 +99,7 @@ CMakeFiles/CityBuilderGame.dir/src/Map.cpp.obj: \
  D:/msys64/ucrt64/include/c++/15.2.0/bits/uses_allocator.h \
  D:/msys64/ucrt64/include/c++/15.2.0/bits/uses_allocator_args.h \
  D:/msys64/ucrt64/include/c++/15.2.0/tuple \
+ D:/261102/city_builder_game/include/MapNode.h \
  D:/msys64/ucrt64/include/SFML/Graphics.hpp \
  D:/msys64/ucrt64/include/SFML/Graphics/BlendMode.hpp \
  D:/msys64/ucrt64/include/SFML/Graphics/Export.hpp \
@@ -288,19 +288,4 @@ CMakeFiles/CityBuilderGame.dir/src/Map.cpp.obj: \
  D:/msys64/ucrt64/include/SFML/System/MemoryInputStream.hpp \
  D:/msys64/ucrt64/include/SFML/System/Sleep.hpp \
  D:/261102/city_builder_game/include/Unit.h \
- D:/msys64/ucrt64/include/c++/15.2.0/cmath \
- D:/msys64/ucrt64/include/math.h \
- D:/msys64/ucrt64/include/c++/15.2.0/bits/specfun.h \
- D:/msys64/ucrt64/include/c++/15.2.0/tr1/gamma.tcc \
- D:/msys64/ucrt64/include/c++/15.2.0/tr1/special_function_util.h \
- D:/msys64/ucrt64/include/c++/15.2.0/tr1/bessel_function.tcc \
- D:/msys64/ucrt64/include/c++/15.2.0/tr1/beta_function.tcc \
- D:/msys64/ucrt64/include/c++/15.2.0/tr1/ell_integral.tcc \
- D:/msys64/ucrt64/include/c++/15.2.0/tr1/exp_integral.tcc \
- D:/msys64/ucrt64/include/c++/15.2.0/tr1/hypergeometric.tcc \
- D:/msys64/ucrt64/include/c++/15.2.0/tr1/legendre_function.tcc \
- D:/msys64/ucrt64/include/c++/15.2.0/tr1/modified_bessel_func.tcc \
- D:/msys64/ucrt64/include/c++/15.2.0/tr1/poly_hermite.tcc \
- D:/msys64/ucrt64/include/c++/15.2.0/tr1/poly_laguerre.tcc \
- D:/msys64/ucrt64/include/c++/15.2.0/tr1/riemann_zeta.tcc \
  D:/msys64/ucrt64/include/c++/15.2.0/iostream

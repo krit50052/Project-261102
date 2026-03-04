@@ -176,6 +176,30 @@ src/Map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CityBuilderGame.dir\build.make CMakeFiles/CityBuilderGame.dir/src/Map.cpp.s
 .PHONY : src/Map.cpp.s
 
+src/UIRenderer.obj: src/UIRenderer.cpp.obj
+.PHONY : src/UIRenderer.obj
+
+# target to build an object file
+src/UIRenderer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CityBuilderGame.dir\build.make CMakeFiles/CityBuilderGame.dir/src/UIRenderer.cpp.obj
+.PHONY : src/UIRenderer.cpp.obj
+
+src/UIRenderer.i: src/UIRenderer.cpp.i
+.PHONY : src/UIRenderer.i
+
+# target to preprocess a source file
+src/UIRenderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CityBuilderGame.dir\build.make CMakeFiles/CityBuilderGame.dir/src/UIRenderer.cpp.i
+.PHONY : src/UIRenderer.cpp.i
+
+src/UIRenderer.s: src/UIRenderer.cpp.s
+.PHONY : src/UIRenderer.s
+
+# target to generate assembly for a file
+src/UIRenderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CityBuilderGame.dir\build.make CMakeFiles/CityBuilderGame.dir/src/UIRenderer.cpp.s
+.PHONY : src/UIRenderer.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -215,6 +239,9 @@ help:
 	@echo ... src/Map.obj
 	@echo ... src/Map.i
 	@echo ... src/Map.s
+	@echo ... src/UIRenderer.obj
+	@echo ... src/UIRenderer.i
+	@echo ... src/UIRenderer.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

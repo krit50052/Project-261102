@@ -11,42 +11,66 @@ Map::~Map() {}
 void Map::initialize() {
     m_nodes.clear();
     
+    // Nodes are added in order, array index = node number - 1
+    // Node 1 (index 0)
     m_nodes.push_back(MapNode(1, "Capital", sf::Vector2f(200, 200), Owner::Player));
     m_nodes.back().setBuilding(BuildingType::Castle);
     
+    // Node 2 (index 1)
     m_nodes.push_back(MapNode(2, "Farmlands", sf::Vector2f(400, 150), Owner::Player));
     m_nodes.back().setBuilding(BuildingType::Farm);
     
+    // Node 3 (index 2)
     m_nodes.push_back(MapNode(3, "Gold Mine", sf::Vector2f(200, 400), Owner::Player));
     m_nodes.back().setBuilding(BuildingType::Mine);
     
-    m_nodes.push_back(MapNode(4, "Plains", sf::Vector2f(640, 300), Owner::Neutral));
-    m_nodes.push_back(MapNode(5, "Forest", sf::Vector2f(800, 150), Owner::Neutral));
+    // Node 4 (index 3)
+    m_nodes.push_back(MapNode(4, "Empty Land", sf::Vector2f(400, 350), Owner::Player));
     
-    m_nodes.push_back(MapNode(6, "Enemy Camp", sf::Vector2f(1000, 300), Owner::Enemy));
-    m_nodes.back().setBuilding(BuildingType::Barracks);
+    // Node 5 (index 4)
+    m_nodes.push_back(MapNode(5, "Plains", sf::Vector2f(640, 300), Owner::Neutral));
     
-    m_nodes.push_back(MapNode(7, "Enemy Fort", sf::Vector2f(1080, 450), Owner::Enemy));
-    m_nodes.back().setBuilding(BuildingType::Castle);
+    // Node 6 (index 5)
+    m_nodes.push_back(MapNode(6, "Forest", sf::Vector2f(800, 150), Owner::Neutral));
+    
+   // Node 7 (index 6)
+   m_nodes.push_back(MapNode(7, "Enemy Camp", sf::Vector2f(950, 300), Owner::Enemy));
+   m_nodes.back().setBuilding(BuildingType::Barracks);
 
-    m_nodes[0].addConnection(2);
-    m_nodes[0].addConnection(3);
-    m_nodes[1].addConnection(1);
-    m_nodes[1].addConnection(4);
-    m_nodes[1].addConnection(5);
-    m_nodes[2].addConnection(1);
-    m_nodes[2].addConnection(4);
-    m_nodes[3].addConnection(2);
-    m_nodes[3].addConnection(3);
-    m_nodes[3].addConnection(5);
-    m_nodes[3].addConnection(6);
-    m_nodes[4].addConnection(2);
-    m_nodes[4].addConnection(4);
-    m_nodes[4].addConnection(7);
-    m_nodes[5].addConnection(4);
-    m_nodes[5].addConnection(7);
-    m_nodes[6].addConnection(5);
-    m_nodes[6].addConnection(6);
+   // Node 8 (index 7)
+   m_nodes.push_back(MapNode(8, "Enemy Fort", sf::Vector2f(950, 450), Owner::Enemy));
+   m_nodes.back().setBuilding(BuildingType::Castle);
+
+    // Connections (using array indices 0-7)
+    m_nodes[0].addConnection(2);  // Capital -> Farmlands
+    m_nodes[0].addConnection(3);  // Capital -> Gold Mine
+    
+    m_nodes[1].addConnection(1);  // Farmlands -> Capital
+    m_nodes[1].addConnection(4);  // Farmlands -> Empty Land
+    m_nodes[1].addConnection(5);  // Farmlands -> Plains
+    
+    m_nodes[2].addConnection(1);  // Gold Mine -> Capital
+    m_nodes[2].addConnection(4);  // Gold Mine -> Empty Land
+    
+    m_nodes[3].addConnection(2);  // Empty Land -> Farmlands
+    m_nodes[3].addConnection(3);  // Empty Land -> Gold Mine
+    m_nodes[3].addConnection(5);  // Empty Land -> Plains
+    
+    m_nodes[4].addConnection(2);  // Plains -> Farmlands
+    m_nodes[4].addConnection(4);  // Plains -> Empty Land
+    m_nodes[4].addConnection(6);  // Plains -> Forest
+    m_nodes[4].addConnection(7);  // Plains -> Enemy Camp
+    
+    m_nodes[5].addConnection(5);  // Forest -> Plains
+    m_nodes[5].addConnection(7);  // Forest -> Enemy Camp
+    m_nodes[5].addConnection(8);  // Forest -> Enemy Fort
+    
+    m_nodes[6].addConnection(5);  // Enemy Camp -> Plains
+    m_nodes[6].addConnection(6);  // Enemy Camp -> Forest
+    m_nodes[6].addConnection(8);  // Enemy Camp -> Enemy Fort
+    
+    m_nodes[7].addConnection(6);  // Enemy Fort -> Forest
+    m_nodes[7].addConnection(7);  // Enemy Fort -> Enemy Camp
 
     std::cout << "Map initialized with " << m_nodes.size() << " nodes." << std::endl;
 }
@@ -129,4 +153,32 @@ MapNode* Map::getNodeAtPosition(sf::Vector2f position) {
         }
     }
     return nullptr;
+}
+
+void Map::renderUnits(sf::RenderWindow& window, const std::vector<Unit>& units) {
+    for (const auto& unit : units) {
+        if (unit.isMoving()) continue; // Don't render moving units yet
+        
+        MapNode* node = getNodeById(unit.getNodeId());
+        if (!node) continue;
+        
+        sf::Vector2f nodePos = node->getPosition();
+        
+        // Unit indicator (small circle)
+        sf::CircleShape unitCircle(10);
+        unitCircle.setPosition(sf::Vector2f(nodePos.x + 20, nodePos.y - 25));
+        
+        if (unit.getOwner() == Owner::Player) {
+            unitCircle.setFillColor(sf::Color(100, 150, 255)); // Light blue
+        } else {
+            unitCircle.setFillColor(sf::Color(255, 100, 100)); // Light red
+        }
+        
+        unitCircle.setOutlineThickness(2);
+        unitCircle.setOutlineColor(sf::Color::White);
+        window.draw(unitCircle);
+        
+        // Unit count (small number)
+        // We'll add text rendering in Game.cpp with the font
+    }
 }

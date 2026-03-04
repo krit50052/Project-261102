@@ -9,7 +9,7 @@ find_package(SFML 3 COMPONENTS Graphics Window System REQUIRED)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
-set(SOURCES src/main.cpp src/Game.cpp src/Map.cpp)
+set(SOURCES src/main.cpp src/Game.cpp src/Map.cpp src/UIRenderer.cpp)
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 

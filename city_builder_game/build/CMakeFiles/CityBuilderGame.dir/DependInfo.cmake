@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/261102/city_builder_game/src/Game.cpp" "CMakeFiles/CityBuilderGame.dir/src/Game.cpp.obj" "gcc" "CMakeFiles/CityBuilderGame.dir/src/Game.cpp.obj.d"
   "D:/261102/city_builder_game/src/Map.cpp" "CMakeFiles/CityBuilderGame.dir/src/Map.cpp.obj" "gcc" "CMakeFiles/CityBuilderGame.dir/src/Map.cpp.obj.d"
+  "D:/261102/city_builder_game/src/UIRenderer.cpp" "CMakeFiles/CityBuilderGame.dir/src/UIRenderer.cpp.obj" "gcc" "CMakeFiles/CityBuilderGame.dir/src/UIRenderer.cpp.obj.d"
   "D:/261102/city_builder_game/src/main.cpp" "CMakeFiles/CityBuilderGame.dir/src/main.cpp.obj" "gcc" "CMakeFiles/CityBuilderGame.dir/src/main.cpp.obj.d"
   )
 

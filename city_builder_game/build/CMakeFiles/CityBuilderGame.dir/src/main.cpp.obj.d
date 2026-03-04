@@ -288,4 +288,6 @@ CMakeFiles/CityBuilderGame.dir/src/main.cpp.obj: \
  D:/msys64/ucrt64/include/SFML/System/InputStream.hpp \
  D:/msys64/ucrt64/include/SFML/System/MemoryInputStream.hpp \
  D:/msys64/ucrt64/include/SFML/System/Sleep.hpp \
+ D:/261102/city_builder_game/include/Unit.h \
+ D:/261102/city_builder_game/include/UIRenderer.h \
  D:/msys64/ucrt64/include/c++/15.2.0/iostream

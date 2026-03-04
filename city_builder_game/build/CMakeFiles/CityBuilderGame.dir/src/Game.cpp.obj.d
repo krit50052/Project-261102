@@ -288,4 +288,16 @@ CMakeFiles/CityBuilderGame.dir/src/Game.cpp.obj: \
  D:/msys64/ucrt64/include/SFML/System/InputStream.hpp \
  D:/msys64/ucrt64/include/SFML/System/MemoryInputStream.hpp \
  D:/msys64/ucrt64/include/SFML/System/Sleep.hpp \
+ D:/261102/city_builder_game/include/Unit.h \
+ D:/261102/city_builder_game/include/UIRenderer.h \
+ D:/msys64/ucrt64/include/c++/15.2.0/set \
+ D:/msys64/ucrt64/include/c++/15.2.0/bits/stl_tree.h \
+ D:/msys64/ucrt64/include/c++/15.2.0/bits/stl_set.h \
+ D:/msys64/ucrt64/include/c++/15.2.0/bits/stl_multiset.h \
+ D:/msys64/ucrt64/include/c++/15.2.0/algorithm \
+ D:/msys64/ucrt64/include/c++/15.2.0/bits/stl_algo.h \
+ D:/msys64/ucrt64/include/c++/15.2.0/bits/algorithmfwd.h \
+ D:/msys64/ucrt64/include/c++/15.2.0/bits/stl_heap.h \
+ D:/msys64/ucrt64/include/c++/15.2.0/bits/uniform_int_dist.h \
+ D:/msys64/ucrt64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
  D:/msys64/ucrt64/include/c++/15.2.0/iostream
